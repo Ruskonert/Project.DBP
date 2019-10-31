@@ -156,3 +156,7 @@ Temporary Items
 .idea/uiDesigner.xml
 Project.DBP.iml
 target/
+src/main/java/club/cpsslab/ruskonert/service/
+src/main/java/io/
+src/main/resources/
+src/test/
