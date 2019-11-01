@@ -13,7 +13,7 @@ import java.sql.ResultSet
  * @param value 탐색을 위해 참조하고 있는 컬럼의 값으로, 해당 값이 일치하는 요소에 대해서 해당 클래스와 동기화함
  * @param provider 동기화 작업을 해줄 수 있는 SQL 프로바인더
  */
-abstract class AsyncTableElement(private val tableName: String, referenceColumn: String, value: Any, provider: SQLConnectionProvider? = null) : SQLController()
+abstract class AsyncTableElement(private val tableName: String, referenceColumn: String, value: Any, provider: SQLConnectionProvider? = null)
 {
     /**
      * 지속적인 동기 작업을 해줄 테이블 이름을 가져옵니다.

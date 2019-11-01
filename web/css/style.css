@@ -35,7 +35,7 @@ body{
 .wrap input {
     border:none;
     background:#fff;
-    font-family: "순천향체", monospace;
+    font-family: Lato, monospace;
     font-weight:700;
     display:block;
     height:40px;

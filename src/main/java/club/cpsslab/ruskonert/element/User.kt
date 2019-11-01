@@ -1,11 +1,30 @@
 package club.cpsslab.ruskonert.element
 
 import club.cpsslab.ruskonert.sql.AsyncTableElement
+import club.cpsslab.ruskonert.sql.SQLConnectionProvider
 import club.cpsslab.ruskonert.sql.TableColumn
 import java.sql.SQLException
 
-open class User(username: String) : AsyncTableElement("user","username", username)
+@Suppress("LiftReturnOrAssignment")
+open class User : AsyncTableElement
 {
+    companion object {
+        private val defaultSQLProvider = SQLConnectionProvider("dbp", defaultConnect = true)
+
+        @JvmStatic
+        fun getUser(username : String) : User?
+        {
+            val user : User
+            try {
+                user = User(username)
+                return user
+            } catch(e : SQLException) {
+                return null
+            }
+        }
+    }
+
+    private constructor(reference_name: String) : super("user","username", reference_name, User.defaultSQLProvider)
     @TableColumn
     private var uniqueId : Int = -1
     fun isAssigned() : Boolean = this.uniqueId != -1

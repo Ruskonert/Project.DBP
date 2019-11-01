@@ -1,5 +1,7 @@
 package club.cpsslab.ruskonert.servlet;
 
+import club.cpsslab.ruskonert.element.User;
+
 import javax.jws.WebService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,7 +38,11 @@ public class LoginServiceServlet extends HttpServlet
             return;
         }
 
-        
+        User referencedUser = User.getUser(username);
+        if(referencedUser == null) {
+            req.setAttribute("error_message", "아이디 또는 비밀번호가 일치하지 않습니다!");
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
+        }
     }
 }
 

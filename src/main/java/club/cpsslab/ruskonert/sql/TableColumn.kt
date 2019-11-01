@@ -9,6 +9,7 @@ package club.cpsslab.ruskonert.sql
  * 있습니다.
  *
  * @param ref 참조하고자 하는 필드
+ * @param sizeOf 참조하는 필드 사이즈
  * @author ruskonert
  */
-annotation class TableColumn(val ref : String = "")
+annotation class TableColumn(val ref : String = "", val sizeOf : Int = -1)

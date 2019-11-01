@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
         <style>
             p {
                 color: red;
-                font-family: 순천향체, monospace;
+                font-family: "맑은 고딕", monospace;
             }
         </style>
         <div>
@@ -41,15 +41,15 @@
         </div>
         <form method="post">
             <label>
-                <input type="text" placeholder="username" required>
+                <input type="text" placeholder="유저 아이디" required>
             </label>
             <div class="bar">
                 <i></i>
             </div>
             <label>
-                <input type="password" placeholder="password" required>
+                <input type="password" placeholder="비밀번호" required>
             </label>
-            <button type="submit">Sign in</button>
+            <button type="submit">로그인</button>
         </form>
     </div>
     <div>
