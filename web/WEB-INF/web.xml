@@ -3,6 +3,9 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>Database Project of doing an assignment</display-name>
+    <welcome-file-list>
+        <welcome-file>_start.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>LoginServiceServlet</servlet-name>
         <servlet-class>club.cpsslab.ruskonert.servlet.LoginServiceServlet</servlet-class>
@@ -29,15 +32,11 @@
         </init-param>
         <load-on-startup>100</load-on-startup>
     </servlet>
-
     <!-- Developed page -->
     <servlet-mapping>
         <servlet-name>LoginServiceServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-
-
-    
     <servlet-mapping>
         <servlet-name>AxisServlet</servlet-name>
         <url-pattern>/servlet/AxisServlet</url-pattern>

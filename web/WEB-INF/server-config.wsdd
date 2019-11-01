@@ -40,12 +40,14 @@
     <parameter name="scope" value="Application"/>
     <parameter name="className" value="org.apache.axis.monitor.SOAPMonitorService"/>
   </service>
+  <!--
     <service name="HelloWorld" provider="java:RPC" style="document" use="literal">
         <parameter name="className" value="example.HelloWorld"/>
         <parameter name="allowedMethods" value="*"/>
         <parameter name="scope" value="Application"/>
         <namespace>http://example</namespace>
     </service>
+    -->
 
   <service name="LoginService" provider="java:RPC" style="document">
     <parameter name="className" value="club.cpsslab.ruskonert.servlet.LoginServiceServlet"/>
